@@ -7,6 +7,14 @@ I made this module because having to open the Token Configuration to change the 
 
 Hopefully this module can help others!
 
+<p style="text-align: center;">
+<img src="https://raw.githubusercontent.com/javieros105/FVTT-TokenHUDWildcard/master/images/prototype-config.png" alt="Prototype Config" height="250"/>
+<img src="https://raw.githubusercontent.com/javieros105/FVTT-TokenHUDWildcard/master/images/hud-button.png" alt="HUD Button" height="250"/>
+<img src="https://raw.githubusercontent.com/javieros105/FVTT-TokenHUDWildcard/master/images/hud-options.png" alt="HUD Options" height="340"/>
+</p>
+
+_The token images were done by the amazing Ross McConnell at [2-Minute Tabletop](https://2minutetabletop.com/) and are part of the Hero Tokens 3 Pack._
+
 ## Installation
 To install the module, follow any of these methods:
 
