@@ -15,7 +15,6 @@ Hooks.on("renderTokenHUD", async (hud, html, token) => {
 	openButton.title = `${game.i18n.localize("THWildcard.Title")}`
 
 	$(openButton).click((event) => {
-		console.log('Pressed Button')
 		const buttonFind = html.find('.control-icon.image-selector')
 		const active = buttonFind[0].classList.contains('active')
 		if (!active) {
@@ -41,8 +40,6 @@ Hooks.on("renderTokenHUD", async (hud, html, token) => {
 				buttons[button].addEventListener('click', function (event) {
 					event.preventDefault()
 					event.stopPropagation()
-					console.log(token)
-					console.log(event.target.name)
 					const controlled = canvas.tokens.controlled
 					const index = controlled.findIndex(x => x.data._id === token._id)
 					const tokenToChange = controlled[index]
