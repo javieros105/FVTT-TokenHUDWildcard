@@ -1,17 +1,19 @@
-.image-swapper-selector-wrap {
+#token-hud .thwildcard-selector-wrap {
     position: absolute;
     left: 75px;
-    color: #CCC;
-    background: rgba(0, 0, 0, 0.6);
-    box-shadow: 0 0 15px #000;
-    border: 1px solid #333;
-    padding: 10px 15px;
-    font-size: 20px;
+    top: -12px;
+    visibility: hidden;
 }
-.image-swapper-button-select {
-    pointer-events: all;
-    margin-bottom: 5px;
-    font-size: 20px;
+#token-hud .thwildcard-selector-wrap.active {
+    visibility: visible;
+}
+#token-hud .thwildcard-button-select {
+    width: 100% !important;
+    max-width: 300px;
+    overflow-wrap: break-word;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+#token-hud .thwildcard-button-select:hover {
     color: white;
-    padding: 2px 10px;
 }

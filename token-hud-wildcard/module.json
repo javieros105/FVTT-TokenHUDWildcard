@@ -2,7 +2,7 @@
 	"name": "token-hud-wildcard",
 	"title": "Token HUD Wildcard",
 	"description": "This module adds a button to the Token HUD if the token has wildcard set and detects more than 1 image to choose from. Pressing the button displays a panel on the right side of the HUD with buttons for each image, pressing one of these allows to change the token image.",
-	"version": "0.1.1",
+	"version": "0.2.0",
 	"minimumCoreVersion": "0.6.0",
 	"compatibleCoreVersion": "0.6.5",
 	"author": "Javieros",
