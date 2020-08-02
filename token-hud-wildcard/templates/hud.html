@@ -1,0 +1,14 @@
+<div class="control-icon thwildcard-selector" >
+    <img src="modules/token-hud-wildcard/img/token-icon.svg" width="36" height="36" title="{{localize 'THWildcard.Title' }}" />
+    <div class="thwildcard-selector-wrap {{#unless imageDisplay}}list{{/unless}}">
+        {{#each imagesParsed as |image|}}
+            <button class="thwildcard-button-select control-icon {{#unless ../imageDisplay}}list{{/unless}} {{#if image.used}}thwildcard-button-disabled active{{/if}}" >
+                {{#if ../imageDisplay}}
+                    <img class="thwildcard-button-image" src="{{image.route}}" alt="{{image.name}}" data-name="{{image.route}}"/>
+                {{else}}
+                    <span data-name="{{image.route}}">{{image.name}}</span>
+                {{/if}}
+            </button>
+        {{/each}}
+    </div>
+</div>

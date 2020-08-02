@@ -1,19 +1,56 @@
 #token-hud .thwildcard-selector-wrap {
     position: absolute;
     left: 75px;
-    top: -12px;
     visibility: hidden;
+    top: 50%;
+    transform: translate(0%, -50%);
+    width: max-content;
+    max-width: 340px;
+    max-height: 350px;
+    text-align: start;
+    grid-template-columns: 100px 100px 100px;
+    overflow-y: auto;
 }
+#token-hud .thwildcard-selector-wrap.list {
+    grid-template-columns: unset !important;
+    max-width: 450px;
+}
+
 #token-hud .thwildcard-selector-wrap.active {
     visibility: visible;
 }
 #token-hud .thwildcard-button-select {
-    width: 100% !important;
     max-width: 300px;
     overflow-wrap: break-word;
     padding-top: 0;
     padding-bottom: 0;
+    width: max-content !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
-#token-hud .thwildcard-button-select:hover {
-    color: white;
+
+#token-hud .thwildcard-button-select.list {
+    max-width: 440px;
+    width: 100% !important;
+    margin: 8px 0px !important;
+}
+
+#token-hud .thwildcard-button-image {
+    width: 100px;
+    height: 100px;
+}
+
+#token-hud .thwildcard-button-disabled span , #token-hud .thwildcard-button-disabled img {
+    filter: grayscale(100%);
+}
+#token-hud .thwildcard-button-disabled span, #token-hud .thwildcard-button-disabled:hover img {
+    opacity: 0.7 !important;
+    color: #CCC;
+}
+
+.token-sheet .thwildcard-default {
+    display: none;
+}
+.token-sheet .thwildcard-default.active {
+    display: block;
 }

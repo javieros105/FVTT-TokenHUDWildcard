@@ -1,3 +1,7 @@
 {
-	"THWildcard.Title": "Haz click aquí para mostrar opciones de imagen"
+	"THWildcard.Title": "Haz click aquí para mostrar opciones de imagen",
+	"THWildcard.Fieldset": "Wildcard token por defecto",
+	"THWildcard.DefaultDescription": "Cuando un token es soltado en el canvas con wildcard seleccionado, si el campo ha sido llenado esta imagen se seleccionara en vez de una al azar.",
+	"THWildcard.DefaultLabel": "Imagen por Defecto:",
+	"THWildcard.ButtonTitle": "Buscar Archivo"
 }

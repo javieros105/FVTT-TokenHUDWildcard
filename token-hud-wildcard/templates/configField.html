@@ -1,0 +1,13 @@
+<fieldset class="thwildcard-default {{#if available}}active{{/if}}">
+    <legend>{{localize 'THWildcard.Fieldset'}}</legend>
+    <div class="form-group">
+        <label for="texture">{{localize 'THWildcard.DefaultLabel'}}</label>
+        <div class="form-fields">
+                <button type="button" class="file-picker" data-type="imagevideo" data-target="flags.token-hud-wildcard.default" title="{{localize 'THWildcard.ButtonTitle'}}" tabindex="-1">
+                    <i class="fas fa-file-import fa-fw"></i>
+                </button>
+                <input class="imagevideo" type="text" name="flags.token-hud-wildcard.default" placeholder="path/image.png" value="{{defaultImg}}"/>
+        </div>
+        <p class="hint">{{localize 'THWildcard.DefaultDescription'}}</p>
+    </div>
+</fieldset>

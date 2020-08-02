@@ -8,12 +8,27 @@ I made this module because having to open the Token Configuration to change the 
 Hopefully this module can help others!
 
 <p style="text-align: center;">
-<img src="https://raw.githubusercontent.com/javieros105/FVTT-TokenHUDWildcard/master/images/prototype-config.png" alt="Prototype Config" height="250"/>
-<img src="https://raw.githubusercontent.com/javieros105/FVTT-TokenHUDWildcard/master/images/hud-button.png" alt="HUD Button" height="250"/>
-<img src="https://raw.githubusercontent.com/javieros105/FVTT-TokenHUDWildcard/master/images/hud-options.png" alt="HUD Options" height="340"/>
+<img src="https://raw.githubusercontent.com/javieros105/FVTT-TokenHUDWildcard/master/images/prototype-config.png" alt="Prototype Config" width="500"/>
+<img src="https://raw.githubusercontent.com/javieros105/FVTT-TokenHUDWildcard/master/images/settings.png" alt="HUD Button" height="150"/>
+<img src="https://raw.githubusercontent.com/javieros105/FVTT-TokenHUDWildcard/master/images/hud-options1.png" alt="HUD Options" height="280"/>
+<img src="https://raw.githubusercontent.com/javieros105/FVTT-TokenHUDWildcard/master/images/hud-options2.png" alt="HUD Options" height="280"/>
 </p>
 
 _The token images were done by the amazing Ross McConnell at [2-Minute Tabletop](https://2minutetabletop.com/) and are part of the Hero Tokens 3 Pack._
+
+## Usage
+
+To use this module you can choose in settings if you want to display the available token images as a list of file names or as a list of thumbnails.
+
+Configuring your Token is done via the Wildcard Images method, open the prototype token configuration and in the "Token Image Path" field choose a path with a * that represents a wild card, any image that follow the pattern of that path will be considered in the possible images of the token.
+
+Check the box "Randomize Wildcard Images", this will activate the wildcard and any time you drop a token in the canvas a random image will be chosen according to the path pattern.
+
+When you have the token in the canvas, opening it's HUD will show a new button if the Token has more than one image to choose from, and depending on the setting it will show the options as a file name or image (default setting is as images), pressing any of these will change the token image.
+
+If you don't want the image on drop to be chosen randomly, you can use the field in the "wildcard drop default" box in the prototype token configuration window. Picking a file here will make it the default image when dropping a new token, if you want it to be random leave it empty.
+
+If you're gonna use the default image field, I recommend you use an image file that follows the wildcard pattern. but it's not required and you can have a different default image. If you choose an image that doesn't follow the pattern you just won't be able to pick it again after changing it in the images panel.
 
 ## Installation
 To install the module, follow any of these methods:
