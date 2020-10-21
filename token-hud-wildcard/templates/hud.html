@@ -4,7 +4,7 @@
         {{#each imagesParsed as |image|}}
             <button class="thwildcard-button-select control-icon {{#unless ../imageDisplay}}list{{/unless}} {{#if image.used}}thwildcard-button-disabled active{{/if}}" >
                 {{#if ../imageDisplay}}
-                    <img class="thwildcard-button-image" src="{{image.route}}" alt="{{image.name}}" data-name="{{image.route}}"/>
+                    <img class="thwildcard-button-image" src="{{image.route}}" alt="{{image.name}}" data-name="{{image.route}}" style="opacity:{{../imageOpacity}};"/>
                 {{else}}
                     <span data-name="{{image.route}}">{{image.name}}</span>
                 {{/if}}

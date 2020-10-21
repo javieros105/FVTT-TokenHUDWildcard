@@ -3,5 +3,9 @@
 	"THWildcard.Fieldset": "Wildcard drop default",
 	"THWildcard.DefaultDescription": "When dropping a token in canvas with wildcard selected, if this field is filled this image will be selected instead of randomizing it.",
 	"THWildcard.DefaultLabel": "Default Image:",
-	"THWildcard.ButtonTitle": "Browse File"
+	"THWildcard.ButtonTitle": "Browse File",
+	"THWildcard.DisplaySettingName": "Display as Image?",
+	"THWildcard.DisplaySettingHint": "Disable to display wildcard options as a list of their filenames in the HUD.",
+	"THWildcard.OpacitySettingName": "Opacity of token preview",
+	"THWildcard.OpacitySettingHint": "Configure the opacity of the token previews in the HUD before hovering on them."
 }

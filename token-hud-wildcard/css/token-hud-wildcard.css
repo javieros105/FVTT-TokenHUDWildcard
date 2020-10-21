@@ -29,6 +29,10 @@
     margin: 0 !important;
 }
 
+#token-hud .thwildcard-button-select:hover .thwildcard-button-image{
+    opacity: 1!important;
+}
+
 #token-hud .thwildcard-button-select.list {
     max-width: 440px;
     width: 100% !important;
@@ -41,10 +45,11 @@
 }
 
 #token-hud .thwildcard-button-disabled span , #token-hud .thwildcard-button-disabled img {
+    opacity: 1 !important;
     filter: grayscale(100%);
 }
 #token-hud .thwildcard-button-disabled span, #token-hud .thwildcard-button-disabled:hover img {
-    opacity: 0.7 !important;
+    /* opacity: 0.7 !important; */
     color: #CCC;
 }
 

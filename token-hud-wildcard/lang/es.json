@@ -1,7 +1,11 @@
 {
 	"THWildcard.Title": "Haz click aquí para mostrar opciones de imagen",
 	"THWildcard.Fieldset": "Wildcard token por defecto",
-	"THWildcard.DefaultDescription": "Cuando un token es soltado en el canvas con wildcard seleccionado, si el campo ha sido llenado esta imagen se seleccionara en vez de una al azar.",
+	"THWildcard.DefaultDescription": "Cuando un token es soltado en el canvas con comodín seleccionado, si el campo ha sido llenado esta imagen se seleccionara en vez de una al azar.",
 	"THWildcard.DefaultLabel": "Imagen por Defecto:",
-	"THWildcard.ButtonTitle": "Buscar Archivo"
+	"THWildcard.ButtonTitle": "Buscar Archivo",
+	"THWildcard.DisplaySettingName": "¿Mostrar como imagen?",
+	"THWildcard.DisplaySettingHint": "Deshabilitar para mostrar opciones de comodín como una lista de nombres de archivos en vez de previsualizar la image en el HUD.",
+	"THWildcard.OpacitySettingName": "Opacidad de las imagenes previsualizadas",
+	"THWildcard.OpacitySettingHint": "Configura la opacidad de las imagenes en el HUD cuando no pasas el puntero por encima de ellas."
 }
