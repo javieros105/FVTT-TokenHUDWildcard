@@ -44,8 +44,20 @@ To install the module, follow any of these methods:
 - Extract the contents of the zip in your modules folder.
 - Restart Foundry and it should be available for your games.
 
-## Planned Features
-Nothing that I can think of just yet.
+## Condensed Changelog
+- #### Features:
+    - Token image previews in HUD.
+    - Default token on drop. Allows the user to pick a token that will always be chosen when dropping actor on canvas instead of random chosen by the wildcard setting.
+    - Global setting to choose between filename and image previews in HUD.
+    - Global opacity setting in module settings for token previews in HUD.
+- #### Fixes:
+    - Allows for image and video previews, non supported formats are not shown in the HUD anymore.
+    - Fixed for Pathfinder 1 game system.
+- #### Localization:
+    - Improved localization of all displayable text.
+    - Languages:
+        - English
+        - Spanish
 
 ## Acknowledgements
 Thanks to Atropos for making this amazing platform for roleplaying games. I've enjoyed it a ton and the possibility of expanding functionalities and adding your own is just awesome.

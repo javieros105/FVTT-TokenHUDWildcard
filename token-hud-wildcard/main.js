@@ -87,7 +87,11 @@ Hooks.on('renderTokenHUD', async (hud, html, token) => {
     const imageOpacity = game.settings.get('token-hud-wildcard', 'imageOpacity')/100
     const imagesParsed = images.map(im => {
         const split = im.split('/')
-        return { route: im, name: split[split.length - 1], used: im === token.img }
+        var extension = im.split('.')
+        extension = extension[extension.length - 1]
+        const img = ['jpg', 'jpeg', 'png', 'svg', 'webp'].includes(extension)
+        const vid =  ['webm', 'mp4', 'm4v'].includes(extension)
+        return { route: im, name: split[split.length - 1], used: im === token.img, img, vid, type: img || vid }
     })
 
     const wildcardDisplay = await renderTemplate('/modules/token-hud-wildcard/templates/hud.html', { imagesParsed, imageDisplay, imageOpacity })
