@@ -40,7 +40,7 @@ const WildcardDefault = {
             const actor = game.actors.get(data.actorId)
 
             const defaultValue = data.flags['token-hud-wildcard'] ? data.flags['token-hud-wildcard'].default : ''
-            if (defaultValue !== '' && actor.data.token.randomImg) {
+            if (defaultValue !== '' && actor?.data.token.randomImg) {
                 setProperty(data, 'img', defaultValue)
             }
         })
@@ -77,7 +77,7 @@ const WildcardDefault = {
 
 Hooks.on('renderTokenHUD', async (hud, html, token) => {
     const actor = game.actors.get(token.actorId)
-    const images = await actor.getTokenImages()
+    const images = await actor?.getTokenImages() ?? []
 
     if (images.length < 2) {
         return
