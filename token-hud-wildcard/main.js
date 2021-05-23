@@ -99,19 +99,22 @@ Hooks.on('renderTokenHUD', async (hud, html, token) => {
     html.find('div.right')
         .append(wildcardDisplay)
         .click((event) => {
-            const buttonFind = html.find('.control-icon.thwildcard-selector')
-            const cList = event.target.parentElement.classList
-            const correctButton = cList.contains('thwildcard-selector')
-            const active = cList.contains('active')
+            let activeButton, clickedButton, tokenButton;
+            for ( const button of html.find('div.control-icon') ) {
+                if (button.classList.contains('active')) activeButton = button
+                if (button === event.target.parentElement) clickedButton = button
+                if (button.dataset.action === 'thwildcard-selector') tokenButton = button
+            }
 
-            if (correctButton && !active) {
-                buttonFind[0].classList.add('active')
+            if (clickedButton === tokenButton && activeButton !== tokenButton) {
+                tokenButton.classList.add('active')
+
                 html.find('.thwildcard-selector-wrap')[0].classList.add('active')
-
-                html.find('.control-icon.effects')[0].classList.remove('active')
+                html.find('.control-icon[data-action="effects"]')[0].classList.remove('active')
                 html.find('.status-effects')[0].classList.remove('active')
             } else {
-                buttonFind[0].classList.remove('active')
+                tokenButton.classList.remove('active')
+
                 html.find('.thwildcard-selector-wrap')[0].classList.remove('active')
             }
         })
