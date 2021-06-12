@@ -40,7 +40,7 @@ const WildcardDefault = {
             const actor = game.actors.get(data.actorId)
 
             const defaultValue = data.flags['token-hud-wildcard'] ? data.flags['token-hud-wildcard'].default : ''
-            if (defaultValue !== '' && actor.data.token.randomImg) {
+            if (defaultValue !== '' && actor?.data.token.randomImg) {
                 setProperty(data, 'img', defaultValue)
             }
         })
@@ -77,7 +77,7 @@ const WildcardDefault = {
 
 Hooks.on('renderTokenHUD', async (hud, html, token) => {
     const actor = game.actors.get(token.actorId)
-    const images = await actor.getTokenImages()
+    const images = await actor?.getTokenImages() ?? []
 
     if (images.length < 2) {
         return
@@ -96,22 +96,28 @@ Hooks.on('renderTokenHUD', async (hud, html, token) => {
 
     const wildcardDisplay = await renderTemplate('/modules/token-hud-wildcard/templates/hud.html', { imagesParsed, imageDisplay, imageOpacity })
 
+    const is080 = !isNewerVersion("0.8.0", game.data.version)
+
     html.find('div.right')
         .append(wildcardDisplay)
         .click((event) => {
-            const buttonFind = html.find('.control-icon.thwildcard-selector')
-            const cList = event.target.parentElement.classList
-            const correctButton = cList.contains('thwildcard-selector')
-            const active = cList.contains('active')
+            let activeButton, clickedButton, tokenButton;
+            for ( const button of html.find('div.control-icon') ) {
+                if (button.classList.contains('active')) activeButton = button
+                if (button === event.target.parentElement) clickedButton = button
+                if (button.dataset.action === 'thwildcard-selector') tokenButton = button
+            }
 
-            if (correctButton && !active) {
-                buttonFind[0].classList.add('active')
+            if (clickedButton === tokenButton && activeButton !== tokenButton) {
+                tokenButton.classList.add('active')
+
                 html.find('.thwildcard-selector-wrap')[0].classList.add('active')
-
-                html.find('.control-icon.effects')[0].classList.remove('active')
+                const effectSelector = is080 ? '[data-action="effects"]' : '.effects'
+                html.find(`.control-icon${effectSelector}`)[0].classList.remove('active')
                 html.find('.status-effects')[0].classList.remove('active')
             } else {
-                buttonFind[0].classList.remove('active')
+                tokenButton.classList.remove('active')
+
                 html.find('.thwildcard-selector-wrap')[0].classList.remove('active')
             }
         })
@@ -125,7 +131,8 @@ Hooks.on('renderTokenHUD', async (hud, html, token) => {
             const controlled = canvas.tokens.controlled
             const index = controlled.findIndex(x => x.data._id === token._id)
             const tokenToChange = controlled[index]
-            tokenToChange.update({ img: event.target.dataset.name })
+            const updateTarget = is080 ? tokenToChange.document : tokenToChange
+            updateTarget.update({ img: event.target.dataset.name })
         })
     })
 })

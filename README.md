@@ -1,5 +1,5 @@
 # Token HUD Wildcard for Foundry VTT
-This is a really simple mondule for Foundry VTT that adds a button to the Token HUD if the corresponding token has Randomized Wildcard Images activated and more than 1 detected image.
+This is a really simple module for Foundry VTT that adds a button to the Token HUD if the corresponding token has Randomized Wildcard Images activated and more than 1 detected image.
 
 When this HUD button is pressed, a small panel will be displayed on the right side of the token HUD with a list of buttons for each detected image from the Wildcard Images functionality. Pressing any of these will allow to easily change the image of the Token without opening the token configuration panel.
 
