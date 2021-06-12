@@ -64,5 +64,8 @@ Thanks to Atropos for making this amazing platform for roleplaying games. I've e
 
 Also thanks to all the module developers that have allowed me to enjoy this software even more and that were the basis for making my own little module.
 
+## Contributors
+- [@arbron](https://github.com/arbron): Making the update for compatibility with 0.8.x of Foundry and fixing errors.
+
 ## License
 The source code is licensed under GPL-3.0.
