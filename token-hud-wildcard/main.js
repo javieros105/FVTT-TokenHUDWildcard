@@ -36,12 +36,11 @@ const WildcardDefault = {
         return flag
     },
     _hookPreTokenCreate () {
-        Hooks.on('preCreateToken', (scene, data, options, userId) => {
-            const actor = game.actors.get(data.actorId)
-
+        Hooks.on('preCreateToken', (token, data, options, userId) => {
+            const actor = token.actor
             const defaultValue = data.flags['token-hud-wildcard'] ? data.flags['token-hud-wildcard'].default : ''
             if (defaultValue !== '' && actor?.data.token.randomImg) {
-                setProperty(data, 'img', defaultValue)
+                token.data.update({img:defaultValue});
             }
         })
     },
