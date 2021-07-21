@@ -30,6 +30,13 @@ If you don't want the image on drop to be chosen randomly, you can use the field
 
 If you're gonna use the default image field, I recommend you use an image file that follows the wildcard pattern. but it's not required and you can have a different default image. If you choose an image that doesn't follow the pattern you just won't be able to pick it again after changing it in the images panel.
 
+You can also use the image filename to set the dimensions of the token using the following example format:
+
+- wildcard images use this pattern `name*`
+- `name_height<number>_width<number>_scale<number>_.extension`, it's important that each parameter s preceded and followed by an underscore, so if you want to set up height, there has to be a `_height<number>_` somewhere in the name
+- you can choose to change `<number>` for a positive integer or floating number and which one to fill. If there are any parameter missing then the module will use the prototype token parameters to fill the ones missing, so you can use images with no parameter setting at all or just set one or two of the parameters.
+- these are valid filenames that will be picked up by the module `name.extension`, `name-different.extension`, `name-other_height2_scale1.5_.extension`
+
 ## Installation
 To install the module, follow any of these methods:
 

@@ -20,6 +20,20 @@ const tokenHUDWildcard = {
     }
 }
 
+const getTokenDimensions = (token, imgName) => {
+    const height = imgName.match(/_height(.*)_/)
+    const width = imgName.match(/_width(.*)_/)
+    const scale = imgName.match(/_scale(.*)_/)
+
+    const prototypeData = token._actor.data.token
+
+    return {
+        height: height ? parseFloat(height[1]) : prototypeData.height,
+        width: width ? parseFloat(width[1]) : prototypeData.width,
+        scale: scale ? parseFloat(scale[1]) : prototypeData.scale,
+    }
+}
+
 Hooks.on('init', () => {
     tokenHUDWildcard.registerSettings()
 })
@@ -39,8 +53,11 @@ const WildcardDefault = {
         Hooks.on('preCreateToken', (token, data, options, userId) => {
             const actor = token.actor
             const defaultValue = data.flags['token-hud-wildcard'] ? data.flags['token-hud-wildcard'].default : ''
+
             if (defaultValue !== '' && actor?.data.token.randomImg) {
-                token.data.update({img:defaultValue});
+                const dimensions = getTokenDimensions(token, defaultValue)
+                let updateInfo = { img: defaultValue, ...dimensions }
+                token.data.update(updateInfo)
             }
         })
     },
@@ -131,7 +148,11 @@ Hooks.on('renderTokenHUD', async (hud, html, token) => {
             const index = controlled.findIndex(x => x.data._id === token._id)
             const tokenToChange = controlled[index]
             const updateTarget = is080 ? tokenToChange.document : tokenToChange
-            updateTarget.update({ img: event.target.dataset.name })
+
+            const dimensions = getTokenDimensions(updateTarget, event.target.dataset.name)
+            let updateInfo = { img: event.target.dataset.name, ...dimensions }
+
+            updateTarget.update(updateInfo)
         })
     })
 })
