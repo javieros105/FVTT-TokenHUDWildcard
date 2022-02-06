@@ -50,13 +50,14 @@ const WildcardDefault = {
         return flag
     },
     _hookPreTokenCreate () {
-        Hooks.on('createToken', (parent, options, userId) => {
+        Hooks.on('preCreateToken', (parent, data, options, userId) => {
             const defaultValue = parent?.actor?.data?.token?.flags['token-hud-wildcard'] ? parent.actor.data.token.flags['token-hud-wildcard'].default : ''
-        
+
             if (defaultValue !== '' && parent?.actor?.data?.token?.randomImg) {
                 const dimensions = getTokenDimensions(parent, defaultValue)
-                let updateInfo = { img: defaultValue, ...dimensions }
-                parent.object.document.update(updateInfo)
+                let updateInfo = { img: defaultValue , ...dimensions }
+                mergeObject(data, updateInfo)
+                parent.data.update(updateInfo)
             }
         })
     },
@@ -65,7 +66,7 @@ const WildcardDefault = {
         if (config.token.data._id) {
             return
         }
-        const imageDataTab = html.find('.tab[data-tab="image"]')
+        const imageDataTab = html.find('.tab[data-tab="appearance"],.tab[data-tab="image"]')
         const checkBoxWildcard = imageDataTab.find('input[name="randomImg"]')
         const configField = await renderTemplate('/modules/token-hud-wildcard/templates/configField.html', { defaultImg, available: checkBoxWildcard[0].checked })
 
