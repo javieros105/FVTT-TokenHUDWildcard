@@ -42,12 +42,12 @@ To install the module, follow any of these methods:
 
 ### Method 1
 - Start up Foundry and in the "Add-on Modules" tab click "Install Module".
-- In the "Manifest URL" field, paste the link: `https://raw.githubusercontent.com/javieros105/FVTT-TokenHUDWildcard/master/token-hud-wildcard/module.json`
+- In the "Manifest URL" field, paste the link: `https://github.com/javieros105/FVTT-TokenHUDWildcard/releases/latest/download/module.json`
 - Click "Install" and wait for it to finish.
 - It should be installed and available in your games.
 
 ### Method 2
-- Download the [.zip file](https://github.com/javieros105/FVTT-TokenHUDWildcard/raw/master/token-hud-wildcard.zip).
+- Download the [.zip file](https://github.com/javieros105/FVTT-TokenHUDWildcard/releases/latest/download/token-hud-wildcard.zip).
 - Extract the contents of the zip in your modules folder.
 - Restart Foundry and it should be available for your games.
 
@@ -60,12 +60,15 @@ To install the module, follow any of these methods:
 - #### Fixes:
     - Allows for image and video previews, non supported formats are not shown in the HUD anymore.
     - Fixed for Pathfinder 1 game system.
+    - Fixed v9 compatibility
+    - Fixed double token rendering and no default token render
 - #### Localization:
     - Improved localization of all displayable text.
     - Languages:
         - English
         - Spanish
-
+- #### Known issues:
+    - Actor.getTokenImages() not working for users without file browser permissions
 ## Acknowledgements
 Thanks to Atropos for making this amazing platform for roleplaying games. I've enjoyed it a ton and the possibility of expanding functionalities and adding your own is just awesome.
 
@@ -73,6 +76,7 @@ Also thanks to all the module developers that have allowed me to enjoy this soft
 
 ## Contributors
 - [@arbron](https://github.com/arbron): Making the update for compatibility with 0.8.x of Foundry and fixing errors.
-
+- [@SirTman](https://github.com/SirTman): Compatibility issue with apperance tab in prototype token foundry v9
+- [@cs96and](https://github.com/cs96and): Fix of default token rendering on preCreateToken hook that created duplicates of image and didn't render the default token.
 ## License
 The source code is licensed under GPL-3.0.
