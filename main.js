@@ -63,7 +63,7 @@ const WildcardDefault = {
     },
     render: async (config, html) => {
         const defaultImg = await WildcardDefault.getDefaultImg(config.token)
-        if (config.token.data._id) {
+        if (config.token._id) {
             return
         }
         const imageDataTab = html.find('.tab[data-tab="appearance"],.tab[data-tab="image"]')
@@ -107,7 +107,7 @@ Hooks.on('renderTokenHUD', async (hud, html, token) => {
         extension = extension[extension.length - 1]
         const img = ['jpg', 'jpeg', 'png', 'svg', 'webp'].includes(extension)
         const vid =  ['webm', 'mp4', 'm4v'].includes(extension)
-        return { route: im, name: split[split.length - 1], used: im === token.img, img, vid, type: img || vid }
+        return { route: im, name: split[split.length - 1], used: im === token.texture.src, img, vid, type: img || vid }
     })
 
     const wildcardDisplay = await renderTemplate('/modules/token-hud-wildcard/templates/hud.html', { imagesParsed, imageDisplay, imageOpacity })
