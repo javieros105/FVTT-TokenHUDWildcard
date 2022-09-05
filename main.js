@@ -51,9 +51,9 @@ const WildcardDefault = {
     },
     _hookPreTokenCreate () {
         Hooks.on('preCreateToken', (parent, data, options, userId) => {
-            const defaultValue = parent?.actor?.data?.token?.flags['token-hud-wildcard'] ? parent.actor.data.token.flags['token-hud-wildcard'].default : ''
+            const defaultValue = parent?.actor?.token?.flags['token-hud-wildcard'] ? parent.actor.token.flags['token-hud-wildcard'].default : ''
 
-            if (defaultValue !== '' && parent?.actor?.data?.token?.randomImg) {
+            if (defaultValue !== '' && parent?.actor?.token?.randomImg) {
                 const dimensions = getTokenDimensions(parent, defaultValue)
                 let updateInfo = { img: defaultValue , ...dimensions }
                 mergeObject(data, updateInfo)
