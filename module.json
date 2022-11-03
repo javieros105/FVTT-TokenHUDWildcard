@@ -1,8 +1,8 @@
 {
-  "name": "token-hud-wildcard",
-  "title": "Token HUD Wildcard",
+  "id": "token-hud-wildcard",
+  "title": "Token HUD Wildcard (fix)",
   "description": "This module adds a button to the Token HUD if the token has wildcard set and detects more than 1 image to choose from. Pressing the button displays a panel on the right side of the HUD with buttons for each image, pressing one of these allows to change the token image.",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "compatibility": {
     "minimum": "10",
     "verified": "10",
@@ -13,9 +13,9 @@
   "author": "Javieros",
   "scripts": ["main.js"],
   "styles": ["./css/token-hud-wildcard.css"],
-  "url": "https://github.com/javieros105/FVTT-TokenHUDWildcard",
-  "manifest": "https://github.com/javieros105/FVTT-TokenHUDWildcard/releases/latest/download/module.json",
-  "download": "https://github.com/javieros105/FVTT-TokenHUDWildcard/releases/download/v1.6.0/token-hud-wildcard.zip",
+  "url": "https://github.com/mhilbrunner/FVTT-TokenHUDWildcard",
+  "manifest": "https://raw.githubusercontent.com/mhilbrunner/FVTT-TokenHUDWildcard/master/module.json",
+  "download": "https://github.com/mhilbrunner/FVTT-TokenHUDWildcard/archive/1.7.0.zip",
   "languages": [
     {
       "lang": "en",
@@ -26,6 +26,11 @@
       "lang": "es",
       "name": "Español (Spanish)",
       "path": "lang/es.json"
+    },
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "lang/de.json"
     }
   ]
 }
