@@ -44,7 +44,7 @@ To install the module, follow any of these methods:
 
 ### Method 1
 - Start up Foundry and in the "Add-on Modules" tab click "Install Module".
-- In the "Manifest URL" field, paste the link: `https://github.com/mhilbrunner/token-hud-wildcard/releases/latest/download/module.json`
+- In the "Manifest URL" field, paste the link: `https://raw.githubusercontent.com/mhilbrunner/token-hud-wildcard/master/module.json`
 - Click "Install" and wait for it to finish.
 - It should be installed and available in your games.
 
