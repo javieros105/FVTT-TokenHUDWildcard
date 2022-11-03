@@ -13,9 +13,9 @@
   "author": "Javieros",
   "scripts": ["main.js"],
   "styles": ["./css/token-hud-wildcard.css"],
-  "url": "https://github.com/mhilbrunner/FVTT-TokenHUDWildcard",
-  "manifest": "https://raw.githubusercontent.com/mhilbrunner/FVTT-TokenHUDWildcard/master/module.json",
-  "download": "https://github.com/mhilbrunner/FVTT-TokenHUDWildcard/archive/1.7.0.zip",
+  "url": "https://github.com/mhilbrunner/token-hud-wildcard",
+  "manifest": "https://raw.githubusercontent.com/mhilbrunner/token-hud-wildcard/master/module.json",
+  "download": "https://github.com/mhilbrunner/token-hud-wildcard/archive/1.7.0.zip",
   "languages": [
     {
       "lang": "en",

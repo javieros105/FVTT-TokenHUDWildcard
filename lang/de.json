@@ -1,7 +1,7 @@
 {
 	"THWildcard.Title": "Hier klicken, um Bildoptionen anzuzeigen",
-	"THWildcard.Fieldset": "Wildcard Standard",
-	"THWildcard.DefaultDescription": "When ein neues Token mit Wildcard auf der Spielfläche abgelegt wird und dieses Feld gefüllt ist, wird dieses Bild standardmäßig statt einem zufällig gewählten angezeigt.",
+	"THWildcard.Fieldset": "Platzhalter-Standardbild",
+	"THWildcard.DefaultDescription": "Wenn ein neues Token mit Platzhalter auf der Spielfläche abgelegt wird und dieses Feld gefüllt ist, wird dieses Bild standardmäßig statt einem zufällig gewählten angezeigt.",
 	"THWildcard.DefaultLabel": "Standard-Bild:",
 	"THWildcard.ButtonTitle": "Datei wählen",
 	"THWildcard.DisplaySettingName": "Als Bild anzeigen?",

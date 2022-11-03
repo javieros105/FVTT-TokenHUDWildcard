@@ -10,10 +10,10 @@ I made this module because having to open the Token Configuration to change the 
 Hopefully this module can help others!
 
 <p style="text-align: center;">
-<img src="https://raw.githubusercontent.com/javieros105/FVTT-TokenHUDWildcard/master/images/prototype-config.png" alt="Prototype Config" width="500"/>
-<img src="https://raw.githubusercontent.com/javieros105/FVTT-TokenHUDWildcard/master/images/settings.png" alt="HUD Button" height="150"/>
-<img src="https://raw.githubusercontent.com/javieros105/FVTT-TokenHUDWildcard/master/images/hud-options1.png" alt="HUD Options" height="280"/>
-<img src="https://raw.githubusercontent.com/javieros105/FVTT-TokenHUDWildcard/master/images/hud-options2.png" alt="HUD Options" height="280"/>
+<img src="https://raw.githubusercontent.com/mhilbrunner/token-hud-wildcard/master/images/prototype-config.png" alt="Prototype Config" width="500"/>
+<img src="https://raw.githubusercontent.com/mhilbrunner/token-hud-wildcard/master/images/settings.png" alt="HUD Button" height="150"/>
+<img src="https://raw.githubusercontent.com/mhilbrunner/token-hud-wildcard/master/images/hud-options1.png" alt="HUD Options" height="280"/>
+<img src="https://raw.githubusercontent.com/mhilbrunner/token-hud-wildcard/master/images/hud-options2.png" alt="HUD Options" height="280"/>
 </p>
 
 _The token images were done by the amazing Ross McConnell at [2-Minute Tabletop](https://2minutetabletop.com/) and are part of the Hero Tokens 3 Pack._
@@ -44,12 +44,12 @@ To install the module, follow any of these methods:
 
 ### Method 1
 - Start up Foundry and in the "Add-on Modules" tab click "Install Module".
-- In the "Manifest URL" field, paste the link: `https://github.com/mhilbrunner/FVTT-TokenHUDWildcard/releases/latest/download/module.json`
+- In the "Manifest URL" field, paste the link: `https://github.com/mhilbrunner/token-hud-wildcard/releases/latest/download/module.json`
 - Click "Install" and wait for it to finish.
 - It should be installed and available in your games.
 
 ### Method 2
-- Download the [.zip file](https://github.com/mhilbrunner/FVTT-TokenHUDWildcard/releases/latest/).
+- Download the [.zip file](https://github.com/mhilbrunner/token-hud-wildcard/releases/latest/).
 - Extract the contents of the zip in your modules folder.
 - Restart Foundry and it should be available for your games.
 
@@ -61,6 +61,7 @@ To install the module, follow any of these methods:
     - Global opacity setting in module settings for token previews in HUD.
 - #### Fixes:
     - Fixed v10 compatibility
+    - Fixed wildcard default image feature
 - #### Localization:
     - Improved localization of all displayable text.
     - Languages:
