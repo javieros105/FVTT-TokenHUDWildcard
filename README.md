@@ -80,7 +80,7 @@ Also thanks to all the module developers that have allowed me to enjoy this soft
 - [@arbron](https://github.com/arbron): Making the update for compatibility with 0.8.x of Foundry and fixing errors.
 - [@SirTman](https://github.com/SirTman): Compatibility issue with apperance tab in prototype token foundry v9
 - [@cs96and](https://github.com/cs96and): Fix of default token rendering on preCreateToken hook that created duplicates of image and didn't render the default token.
-- [@MiniGrief](https://github.com/MiniGrief): Foundry v10 compatbilitiy and bug fixes.
+- [@MiniGrief](https://github.com/MiniGrief): Foundry v10 compatibility and bug fixes.
 
 ## License
 The source code is licensed under GPL-3.0.
