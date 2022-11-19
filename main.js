@@ -25,7 +25,7 @@ const getTokenDimensions = (token, imgName) => {
     const width = imgName.match(/_width(.*)_/);
     const scale = imgName.match(/_scale(.*)_/);
 
-    const prototypeData = token._actor.data.token;
+    const prototypeData = token._actor.prototypeToken;
 
     return {
         height: height ? parseFloat(height[1]) : prototypeData.height,
@@ -141,7 +141,7 @@ Hooks.on('renderTokenHUD', async (hud, html, token) => {
             event.preventDefault();
             event.stopPropagation();
             const controlled = canvas.tokens.controlled;
-            const index = controlled.findIndex(x => x.data._id === token._id);
+            const index = controlled.findIndex(x => x.document._id === token._id);
             const tokenToChange = controlled[index];
             const updateTarget = tokenToChange.document;
 
