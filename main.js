@@ -30,7 +30,7 @@ const getTokenDimensions = (token, imgName) => {
     return {
         height: height ? parseFloat(height[1]) : prototypeData.height,
         width: width ? parseFloat(width[1]) : prototypeData.width,
-        scale: scale ? parseFloat(scale[1]) : prototypeData.scale,
+        scale: scale ? parseFloat(scale[1]) : prototypeData.texture.scaleX,
     }
 }
 
