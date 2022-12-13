@@ -1,0 +1,11 @@
+{
+	"THWildcard.Title": "Hier klicken, um Bildoptionen anzuzeigen",
+	"THWildcard.Fieldset": "Platzhalter-Standardbild",
+	"THWildcard.DefaultDescription": "Wenn ein neues Token mit Platzhalter auf der Spielfläche abgelegt wird und dieses Feld gefüllt ist, wird dieses Bild standardmäßig statt einem zufällig gewählten angezeigt.",
+	"THWildcard.DefaultLabel": "Standard-Bild:",
+	"THWildcard.ButtonTitle": "Datei wählen",
+	"THWildcard.DisplaySettingName": "Als Bild anzeigen?",
+	"THWildcard.DisplaySettingHint": "Deaktivieren, um die Bilder stattdessen als Liste von Dateinamen im Auswahl-HUD anzuzeigen.",
+	"THWildcard.OpacitySettingName": "Transparenz der Tokenvorschau",
+	"THWildcard.OpacitySettingHint": "Lege die Transparenz der Token-Vorschau im HUD (bevor der Mauszeiger über sie fährt)  fest."
+}
