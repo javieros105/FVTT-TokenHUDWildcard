@@ -51,11 +51,11 @@ const WildcardDefault = {
     },
     _hookPreTokenCreate() {
         Hooks.on('preCreateToken', (parent, data, options, userId) => {
-            const defaultValue = parent?.actor?.prototypeToken?.flags['token-hud-wildcard'] ? parent.actor.prototypeToken.flags['token-hud-wildcard'].default : '';
-            if (defaultValue !== '' && parent?.actor?.prototypeToken?.randomImg) {
+            const defaultValue = parent?.actor?.prototypeToken?.getFlag('token-hud-wildcard', 'default');
+            if (defaultValue && parent?.actor?.prototypeToken?.randomImg) {
                 /*const dimensions = getTokenDimensions(parent, defaultValue);
                 let updateInfo = { img: defaultValue, ...dimensions };*/
-                parent.data.update({"texture.src" : defaultValue});
+                parent.updateSource({"texture.src" : defaultValue});
             }
         });
     },
